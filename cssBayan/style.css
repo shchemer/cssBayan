@@ -1,14 +1,14 @@
 @font-face {
 	font-family: "Montserrat";
-	src: url(fonts/Montserrat-Regular.woff2), 
-		  url(fonts/Montserrat-Regular.woff);
+	src: url(fonts/Montserrat-Regular.woff2),
+		url(fonts/Montserrat-Regular.woff);
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: "Montserrat";
 	src: url(fonts/Montserrat-Bold.woff2),
-		  url(fonts/Montserrat-Bold.woff);
+		url(fonts/Montserrat-Bold.woff);
 	font-weight: 700;
 }
 
@@ -38,20 +38,24 @@ body {
 	margin: 5% 0;
 }
 
-.bayan-container > *:not(:first-child) {
-	margin: 1em 0 0 0;
+.bayan-container>* {
+	border-bottom: .1em solid;
+	padding: 1em 0 1em 0;
 }
 
-.bayan-container > * {
-	border-bottom: .1em solid;
+.bayan-container>*:first-child {
 	padding: 0 0 1em 0;
 }
 
-.bayan-container:not(:hover) > * > .bayan-option-box__option {
+.bayan-container:not(:hover) .bayan-option-box__name {
 	color: #5193c9;
 }
 
-.bayan-container > *:hover > .bayan-option-box__content > .bayan-option-box__meme-img{
+.bayan-option-box__radio-btn:checked~.bayan-option-box__content, .bayan-container>*:hover>.bayan-option-box__content {
+	padding: .5em 0 0 0;
+}
+
+.bayan-container>*:hover>.bayan-option-box__content>.bayan-option-box__meme-img {
 	display: block;
 }
 
@@ -60,29 +64,41 @@ body {
 	font-size: 3em;
 }
 
-.bayan-option-box > *:hover{
-	cursor: pointer;
-}
-
-.bayan-option-box__option {
+.bayan-option-box {
 	display: block;
-	font-size: 1.5em;
+	cursor: pointer;
 }
 
 .bayan-option-box__radio-btn {
 	display: none;
 }
 
-.bayan-option-box__radio-btn:checked + .bayan-option-box__option {
+.bayan-option-box__title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bayan-option-box__name {
+	font-size: 1.5em;
+}
+
+.bayan-option-box__radio-btn:checked + .bayan-option-box__title .bayan-option-box__name {
 	color: inherit;
 }
 
-.bayan-option-box__radio-btn:checked ~ .bayan-option-box__content > .bayan-option-box__meme-img {
+.bayan-option-box__title > .fa {
+	font-weight: 400;
+}
+
+.bayan-option-box__plus {
+	font-size: 1.6em;
+}
+
+.bayan-option-box__radio-btn:checked~.bayan-option-box__content>.bayan-option-box__meme-img {
 	display: block;
 }
 
 .bayan-option-box__content {
-	margin: .5em 0 0 0;
 	display: flex;
 	justify-content: center;
 }

@@ -19,48 +19,48 @@
 	border: 0;
 }
 
-html, body {
-	height: 100%;
-}
-
 body {
 	font-family: "Montserrat";
 	font-weight: 400;
-}
-
-.bayan {
-	height: 100%;
+	background: no-repeat linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);	
+	min-height: 100vh;
+	color: #181818;
 }
 
-.bayan-container {
+.bayan {
 	width: 60%;
 }
 
-.bayan-title, .bayan__option {
-	border-bottom: .05em solid #181818;
+.bayan-container {
+	margin: 5% 0;
 }
 
-.bayan__title {
+.bayan-container > *:not(:first-child) {
+	margin: 1em 0 0 0;
+}
+
+.bayan-container > * {
+	border-bottom: .1em solid;
+	padding: 0 0 1em 0;
+}
+
+.bayan-title-box__title {
 	font-weight: 700;
 	font-size: 3em;
-	margin-bottom: 0.75em;
-	color: #181818;
 }
 
-.bayan__option {
+.bayan-option-box__option {
 	display: block;
 	font-size: 1.5em;
-	color: #181818;
 }
 
-.bayan__option:not(:last-of-type) {
-	margin-bottom: 0.5em;
+.bayan-option-box__radio-btn {
+	display: none;
 }
 
-.bayan__radio-btn {
+.bayan-option-box__meme-img {
 	display: none;
 }

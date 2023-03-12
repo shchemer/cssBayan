@@ -47,9 +47,21 @@ body {
 	padding: 0 0 1em 0;
 }
 
+.bayan-container:not(:hover) > * > .bayan-option-box__option {
+	color: #5193c9;
+}
+
+.bayan-container > *:hover > .bayan-option-box__content > .bayan-option-box__meme-img{
+	display: block;
+}
+
 .bayan-title-box__title {
 	font-weight: 700;
 	font-size: 3em;
+}
+
+.bayan-option-box > *:hover{
+	cursor: pointer;
 }
 
 .bayan-option-box__option {
@@ -61,6 +73,22 @@ body {
 	display: none;
 }
 
+.bayan-option-box__radio-btn:checked + .bayan-option-box__option {
+	color: inherit;
+}
+
+.bayan-option-box__radio-btn:checked ~ .bayan-option-box__content > .bayan-option-box__meme-img {
+	display: block;
+}
+
+.bayan-option-box__content {
+	margin: .5em 0 0 0;
+	display: flex;
+	justify-content: center;
+}
+
 .bayan-option-box__meme-img {
 	display: none;
+	width: 50%;
+	aspect-ratio: 3 / 2;
 }

@@ -51,12 +51,13 @@ body {
 	color: #5193c9;
 }
 
-.bayan-option-box__radio-btn:checked~.bayan-option-box__content, .bayan-container>*:hover>.bayan-option-box__content {
+.bayan-option-box__radio-btn:checked~.bayan-option-box__content,
+.bayan-container>*:hover>.bayan-option-box__content {
 	padding: .5em 0 0 0;
 }
 
 .bayan-container>*:hover>.bayan-option-box__content>.bayan-option-box__meme-img {
-	display: block;
+	width: 50%;
 }
 
 .bayan-title-box__title {
@@ -80,22 +81,26 @@ body {
 
 .bayan-option-box__name {
 	font-size: 1.5em;
+	transition: color .5s ease-out;
 }
 
-.bayan-option-box__radio-btn:checked + .bayan-option-box__title .bayan-option-box__name {
+.bayan-option-box__radio-btn:checked+.bayan-option-box__title .bayan-option-box__name {
 	color: inherit;
 }
 
-.bayan-option-box__title > .fa {
+.bayan-option-box__title>.bayan-option-box__plus {
 	font-weight: 400;
+	font-size: 1.6em;
+	transition: transform .8s ease-out
 }
 
-.bayan-option-box__plus {
-	font-size: 1.6em;
+.bayan-option-box__radio-btn:checked~.bayan-option-box__title>.bayan-option-box__plus,
+.bayan-container>*:hover .bayan-option-box__plus {
+	transform: rotate(45deg);
 }
 
 .bayan-option-box__radio-btn:checked~.bayan-option-box__content>.bayan-option-box__meme-img {
-	display: block;
+	width: 50%;
 }
 
 .bayan-option-box__content {
@@ -104,7 +109,7 @@ body {
 }
 
 .bayan-option-box__meme-img {
-	display: none;
-	width: 50%;
+	width: 0%;
 	aspect-ratio: 3 / 2;
+	transition: width 0.5s ease-in;
 }
